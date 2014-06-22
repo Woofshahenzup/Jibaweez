@@ -8,6 +8,15 @@ export OUTPUT_CHARSET=UTF-8
 MAIN_DIALOG='
 <window title="'$(gettext 'Wbar Start')'">
   <vbox>
+  <text>
+  <label>"'$(gettext 'Wbar es una barra de iconos, al estilo del dock de Mac OS X')'"</label>
+  </text>
+  <text>
+  <label>"'$(gettext 'quiere agregarla al inicio?')'"</label>
+  </text>
+  <text>
+  <label>""</label>
+  </text>
   <hbox>
   <button>
   <label>"'$(gettext 'Enable wbar')'"</label>
@@ -17,7 +26,7 @@ MAIN_DIALOG='
 <action type="exit">CLOSE</action>
 </button>
   <text>
-  <label>""</label>
+  <label>".                                            ."</label>
   </text>
   <button>
   <label>"'$(gettext 'Disable wbar')'"</label>
