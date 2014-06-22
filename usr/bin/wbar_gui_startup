@@ -19,7 +19,7 @@ MAIN_DIALOG='
   <button>
   <label>"'$(gettext 'Enable wbar')'"</label>
   <input file>/usr/share/wbar/wbar.png</input>
-<action>ln -s /usr/bin/wbar /root/Startup/wbar &</action>
+<action>ln -s /usr/bin/wbar /root/Startup/wbar & wbar &</action>
 <action>gtkdialog-splash -close box -bg orange -timeout 5 -text "'$(gettext 'Wbar added to start')'" &</action>
 <action type="exit">CLOSE</action>
 </button>
