@@ -1,0 +1,25 @@
+#!/bin/sh
+#gettext
+#Hack for xchat
+  if [ -f $HOME/.xchat2/xchat.conf ];then
+		x=$RANDOM
+		sed -i -e "s|Pupjibaro_wheezy|Pupjibaro_wheezy${x}|" \
+				-e  "s|Pupjibaro_wheezy1|Pupjibaro_wheezy${x}1|" \
+				-e "s|Pupjibaro_wheezy2|Pupjibaro_wheezy${x}2|" \
+				$HOME/.xchat2/xchat.conf
+  fi
+export TEXTDOMAIN=wbar_gui_startup_1
+export OUTPUT_CHARSET=UTF-8
+
+myicon="/usr/share/wbar/wbar.png"
+gtkdialog-splash -close box -icon "$myicon" -bg orange -timeout 6 -text "$(gettext "Wbar es una barra de iconos, al estilo del dock de Mac OS X, quiere agregarla al inicio?,")" && 
+exec wbar_gui_startup.sh
+
+#Hack for xchat
+  if [ -f $HOME/.xchat2/xchat.conf ];then
+		x=$RANDOM
+		sed -i -e "s|Pupjibaro_wheezy|Pupjibaro_wheezy${x}|" \
+				-e  "s|Pupjibaro_wheezy1|Pupjibaro_wheezy${x}1|" \
+				-e "s|Pupjibaro_wheezy2|Pupjibaro_wheezy${x}2|" \
+				$HOME/.xchat2/xchat.conf
+  fi
