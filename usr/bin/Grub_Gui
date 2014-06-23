@@ -1,12 +1,12 @@
 #!/bin/sh
 #josejp2424
-#nilsonmorales i18n 
+#nilsonmorales i18n, l10n
 
 export TEXTDOMAIN=Grub_Gui
 export OUTPUT_CHARSET=UTF-8
 
 Grub_Gui='
-<window title="'$(gettext 'Grub ( gestor de arranque )')'">
+<window title="'$(gettext 'Grub ( Boot loader )')'">
 <vbox>
 <pixmap>
 <height>48</height>
@@ -17,7 +17,7 @@ Grub_Gui='
 <label>""</label>
 </text>
 <text>
-<label>"'$(gettext 'Seleccione el gestor de arranque,que desea usar.')'"</label>
+<label>"'$(gettext 'Select the bootloader that you want to use.')'"</label>
 </text> 
 <hbox>
 <text>

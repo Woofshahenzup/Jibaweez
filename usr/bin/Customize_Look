@@ -6,7 +6,7 @@ export TEXTDOMAIN=Customize_Look
 export OUTPUT_CHARSET=UTF-8
 
 Customize_Look='
-<window title="'$(gettext 'Customize_Look Pupjibaro')'" icon-name="gtk-preferences">
+<window title="'$(gettext 'Customize Look Pupjibaro')'" icon-name="gtk-preferences">
 <vbox>
 <pixmap>
 <height>40</height>
@@ -17,7 +17,7 @@ Customize_Look='
 <label>""</label>
 </text>
 <text>
-<label>"'$(gettext 'Personalizar apariencia y comportamiento de Pupjibaro.')'"</label>
+<label>"'$(gettext 'Customize the Pupjibaro look and feel.')'"</label>
 </text> 
 <text>
 <label>""</label>

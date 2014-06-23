@@ -8,11 +8,9 @@ export OUTPUT_CHARSET=UTF-8
 MAIN_DIALOG='
 <window title="'$(gettext 'Wbar Start')'">
   <vbox>
-  <text>
-  <label>"'$(gettext 'Wbar es una barra de iconos, al estilo del dock de Mac OS X')'"</label>
-  </text>
-  <text>
-  <label>"'$(gettext 'quiere agregarla al inicio?')'"</label>
+<text justify="2" use-markup="true"><label>"'$(gettext '<span color='"'orange'"' font-family='"'orbitron'"' weight='"'bold'"' size='"'x-large'"'><b>Wbar is a icon dock bar, like Mac OS X style</b></span> ')'"</label></text>
+  <text justify="2" use-markup="true">
+  <label>"'$(gettext '<span color='"'orange'"' font-family='"'orbitron'"' weight='"'bold'"' size='"'x-large'"'><b>do you want add Wbar to startup?</b></span>')'"</label>
   </text>
   <text>
   <label>""</label>
