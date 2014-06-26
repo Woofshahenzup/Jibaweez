@@ -7,6 +7,8 @@ export OUTPUT_CHARSET=UTF-8
 
 MAIN_DIALOG='
 <window title="'$(gettext 'Wbar Start')'">
+<frame>
+<text width-chars="20" height-request="30"><label>""</label></text>
   <vbox>
 <text justify="2" use-markup="true"><label>"'$(gettext '<span color='"'orange'"' font-family='"'orbitron'"' weight='"'bold'"' size='"'x-large'"'><b>Wbar is a icon dock bar, like Mac OS X style</b></span> ')'"</label></text>
   <text justify="2" use-markup="true">
@@ -15,7 +17,7 @@ MAIN_DIALOG='
   <text>
   <label>""</label>
   </text>
-  <hbox>
+  <hbox homogeneous="true">
   <button>
   <label>"'$(gettext 'Enable wbar')'"</label>
   <input file>/usr/share/wbar/wbar.png</input>
@@ -23,9 +25,6 @@ MAIN_DIALOG='
 <action>gtkdialog-splash -close box -bg orange -timeout 5 -text "'$(gettext 'Wbar added to start')'" &</action>
 <action type="exit">CLOSE</action>
 </button>
-  <text>
-  <label>".                                            ."</label>
-  </text>
   <button>
   <label>"'$(gettext 'Disable wbar')'"</label>
   <input file>/usr/share/wbar/wbar.png</input>
@@ -35,5 +34,6 @@ MAIN_DIALOG='
      </button>
      </hbox>
   </vbox>
+  </frame>
 </window>
 ' gtkdialog3 --program=MAIN_DIALOG --center --gtk-module=gtk2desklet
